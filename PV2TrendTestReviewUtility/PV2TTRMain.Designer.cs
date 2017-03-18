@@ -1,6 +1,6 @@
 ﻿namespace PV2TrendTestReviewUtility
 {
-    partial class Form1
+    partial class PV2TTRMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.OpenTrendTestFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.SuspendLayout();
+            // 
+            // OpenTrendTestFileDialog
+            // 
+            this.OpenTrendTestFileDialog.DefaultExt = "ttr";
+            this.OpenTrendTestFileDialog.Filter = "Trend Test fules|*.ttr|All files|*.*";
+            // 
+            // PV2TTRMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(2052, 904);
+            this.Name = "PV2TTRMain";
+            this.Text = "PneuView® 2.0 Trend Test Review";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.OpenFileDialog OpenTrendTestFileDialog;
     }
 }
 
