@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MeasuredParameter.cs" />
     <Compile Include="PV2TTRMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +53,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrendTestResults.cs" />
     <EmbeddedResource Include="PV2TTRMain.resx">
       <DependentUpon>PV2TTRMain.cs</DependentUpon>
     </EmbeddedResource>
