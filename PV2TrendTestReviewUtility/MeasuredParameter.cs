@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PV2TrendTestReviewUtility
 {
-    class MeasuredParameter
+    public class MeasuredParameter
     {
         private string name;
         public string Name
@@ -84,5 +84,11 @@ namespace PV2TrendTestReviewUtility
             set { maxTime = value; }
         }
 
+        public MeasuredParameter(string _name, int _precision, string _units)
+        {
+            this.name = _name;
+            this.precision = _precision;
+            this.units = _units;
+        }
     }
 }

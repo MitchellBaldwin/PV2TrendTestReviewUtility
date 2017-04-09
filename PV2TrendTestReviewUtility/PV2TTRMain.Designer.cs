@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Proximal Pressure",
-            "15.00",
-            "18.00",
-            "21.00"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.OpenTrendTestFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ttrLlistView = new System.Windows.Forms.ListView();
             this.measuredParameterColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,14 +46,14 @@
             this.testDateDisplayLabel = new System.Windows.Forms.Label();
             this.serialNumberLabel = new System.Windows.Forms.Label();
             this.serialNumberDisplayLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.complianceDisplayLabel = new System.Windows.Forms.Label();
+            this.complianceLabel = new System.Windows.Forms.Label();
+            this.resistanceDisplayLabel = new System.Windows.Forms.Label();
+            this.resistanceLabel = new System.Windows.Forms.Label();
+            this.gasTemperatureDisplayLabel = new System.Windows.Forms.Label();
+            this.gasTemperatureLabel = new System.Windows.Forms.Label();
+            this.barometricPressureDisplayLabel = new System.Windows.Forms.Label();
+            this.barometricPressureLabel = new System.Windows.Forms.Label();
             this.complianceUnitsLabel = new System.Windows.Forms.Label();
             this.gasTemperatureUnitsLabel = new System.Windows.Forms.Label();
             this.barometricBressureUnitsLabel = new System.Windows.Forms.Label();
@@ -94,10 +89,6 @@
             this.ttrLlistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ttrLlistView.FullRowSelect = true;
             this.ttrLlistView.GridLines = true;
-            this.ttrLlistView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            listViewItem4.IndentCount = 1;
-            this.ttrLlistView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
             this.ttrLlistView.Location = new System.Drawing.Point(0, 0);
             this.ttrLlistView.Name = "ttrLlistView";
             this.ttrLlistView.Size = new System.Drawing.Size(1695, 704);
@@ -108,60 +99,60 @@
             // measuredParameterColumnHeader
             // 
             this.measuredParameterColumnHeader.Text = "Measured Parameter";
-            this.measuredParameterColumnHeader.Width = 300;
+            this.measuredParameterColumnHeader.Width = 200;
             // 
             // lowLimitColumnHeader
             // 
             this.lowLimitColumnHeader.Text = "Low Limit";
-            this.lowLimitColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lowLimitColumnHeader.Width = 120;
+            this.lowLimitColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lowLimitColumnHeader.Width = 80;
             // 
             // targetColumnHeader
             // 
             this.targetColumnHeader.Text = "Target";
-            this.targetColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.targetColumnHeader.Width = 120;
+            this.targetColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.targetColumnHeader.Width = 80;
             // 
             // highLimitColumnHeader
             // 
             this.highLimitColumnHeader.Text = "High Limit";
-            this.highLimitColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.highLimitColumnHeader.Width = 120;
+            this.highLimitColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.highLimitColumnHeader.Width = 80;
             // 
             // minimumColumnHeader
             // 
             this.minimumColumnHeader.Text = "Minimum";
-            this.minimumColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.minimumColumnHeader.Width = 120;
+            this.minimumColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.minimumColumnHeader.Width = 80;
             // 
             // averageColumnHeader
             // 
             this.averageColumnHeader.Text = "Average";
-            this.averageColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.averageColumnHeader.Width = 120;
+            this.averageColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.averageColumnHeader.Width = 80;
             // 
             // maximumColumnHeader
             // 
             this.maximumColumnHeader.Text = "Maximum";
-            this.maximumColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maximumColumnHeader.Width = 120;
+            this.maximumColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maximumColumnHeader.Width = 80;
             // 
             // unitsColumnHeader
             // 
             this.unitsColumnHeader.Text = "Units";
-            this.unitsColumnHeader.Width = 120;
+            this.unitsColumnHeader.Width = 80;
             // 
             // minTimeColumnHeader
             // 
             this.minTimeColumnHeader.Text = "Min Time";
             this.minTimeColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.minTimeColumnHeader.Width = 120;
+            this.minTimeColumnHeader.Width = 80;
             // 
             // maxTimeColumnHeader
             // 
             this.maxTimeColumnHeader.Text = "Max Time";
             this.maxTimeColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maxTimeColumnHeader.Width = 120;
+            this.maxTimeColumnHeader.Width = 80;
             // 
             // lttrfButton
             // 
@@ -214,73 +205,73 @@
             this.serialNumberDisplayLabel.Text = "SL00000";
             this.serialNumberDisplayLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label1
+            // complianceDisplayLabel
             // 
-            this.label1.Location = new System.Drawing.Point(864, 747);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 23);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "0.05";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.complianceDisplayLabel.Location = new System.Drawing.Point(864, 747);
+            this.complianceDisplayLabel.Name = "complianceDisplayLabel";
+            this.complianceDisplayLabel.Size = new System.Drawing.Size(136, 23);
+            this.complianceDisplayLabel.TabIndex = 8;
+            this.complianceDisplayLabel.Text = "0.05";
+            this.complianceDisplayLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label2
+            // complianceLabel
             // 
-            this.label2.Location = new System.Drawing.Point(615, 747);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 23);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Compliance:";
+            this.complianceLabel.Location = new System.Drawing.Point(615, 747);
+            this.complianceLabel.Name = "complianceLabel";
+            this.complianceLabel.Size = new System.Drawing.Size(228, 23);
+            this.complianceLabel.TabIndex = 7;
+            this.complianceLabel.Text = "Compliance:";
             // 
-            // label3
+            // resistanceDisplayLabel
             // 
-            this.label3.Location = new System.Drawing.Point(864, 777);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 23);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "5";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.resistanceDisplayLabel.Location = new System.Drawing.Point(864, 777);
+            this.resistanceDisplayLabel.Name = "resistanceDisplayLabel";
+            this.resistanceDisplayLabel.Size = new System.Drawing.Size(136, 23);
+            this.resistanceDisplayLabel.TabIndex = 10;
+            this.resistanceDisplayLabel.Text = "5";
+            this.resistanceDisplayLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label4
+            // resistanceLabel
             // 
-            this.label4.Location = new System.Drawing.Point(615, 777);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(228, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Resistance:";
+            this.resistanceLabel.Location = new System.Drawing.Point(615, 777);
+            this.resistanceLabel.Name = "resistanceLabel";
+            this.resistanceLabel.Size = new System.Drawing.Size(228, 23);
+            this.resistanceLabel.TabIndex = 9;
+            this.resistanceLabel.Text = "Resistance:";
             // 
-            // label5
+            // gasTemperatureDisplayLabel
             // 
-            this.label5.Location = new System.Drawing.Point(864, 807);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 23);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "20";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.gasTemperatureDisplayLabel.Location = new System.Drawing.Point(864, 807);
+            this.gasTemperatureDisplayLabel.Name = "gasTemperatureDisplayLabel";
+            this.gasTemperatureDisplayLabel.Size = new System.Drawing.Size(136, 23);
+            this.gasTemperatureDisplayLabel.TabIndex = 12;
+            this.gasTemperatureDisplayLabel.Text = "20";
+            this.gasTemperatureDisplayLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label6
+            // gasTemperatureLabel
             // 
-            this.label6.Location = new System.Drawing.Point(615, 807);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(228, 23);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Gas Temperature:";
+            this.gasTemperatureLabel.Location = new System.Drawing.Point(615, 807);
+            this.gasTemperatureLabel.Name = "gasTemperatureLabel";
+            this.gasTemperatureLabel.Size = new System.Drawing.Size(228, 23);
+            this.gasTemperatureLabel.TabIndex = 11;
+            this.gasTemperatureLabel.Text = "Gas Temperature:";
             // 
-            // label7
+            // barometricPressureDisplayLabel
             // 
-            this.label7.Location = new System.Drawing.Point(864, 837);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 23);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "760";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.barometricPressureDisplayLabel.Location = new System.Drawing.Point(864, 837);
+            this.barometricPressureDisplayLabel.Name = "barometricPressureDisplayLabel";
+            this.barometricPressureDisplayLabel.Size = new System.Drawing.Size(136, 23);
+            this.barometricPressureDisplayLabel.TabIndex = 14;
+            this.barometricPressureDisplayLabel.Text = "760";
+            this.barometricPressureDisplayLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label8
+            // barometricPressureLabel
             // 
-            this.label8.Location = new System.Drawing.Point(615, 837);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(228, 23);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Barometric Pressure:";
+            this.barometricPressureLabel.Location = new System.Drawing.Point(615, 837);
+            this.barometricPressureLabel.Name = "barometricPressureLabel";
+            this.barometricPressureLabel.Size = new System.Drawing.Size(228, 23);
+            this.barometricPressureLabel.TabIndex = 13;
+            this.barometricPressureLabel.Text = "Barometric Pressure:";
             // 
             // complianceUnitsLabel
             // 
@@ -312,7 +303,7 @@
             this.sampleIntervalUnitsLabel.Name = "sampleIntervalUnitsLabel";
             this.sampleIntervalUnitsLabel.Size = new System.Drawing.Size(132, 23);
             this.sampleIntervalUnitsLabel.TabIndex = 25;
-            this.sampleIntervalUnitsLabel.Text = "m";
+            this.sampleIntervalUnitsLabel.Text = "hh:mm:ss";
             // 
             // testLengthUnitsLabel
             // 
@@ -320,7 +311,7 @@
             this.testLengthUnitsLabel.Name = "testLengthUnitsLabel";
             this.testLengthUnitsLabel.Size = new System.Drawing.Size(132, 23);
             this.testLengthUnitsLabel.TabIndex = 24;
-            this.testLengthUnitsLabel.Text = "h";
+            this.testLengthUnitsLabel.Text = "hh:mm:ss";
             // 
             // totalSamplesDisplayLabel
             // 
@@ -390,14 +381,14 @@
             this.Controls.Add(this.barometricBressureUnitsLabel);
             this.Controls.Add(this.gasTemperatureUnitsLabel);
             this.Controls.Add(this.complianceUnitsLabel);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.barometricPressureDisplayLabel);
+            this.Controls.Add(this.barometricPressureLabel);
+            this.Controls.Add(this.gasTemperatureDisplayLabel);
+            this.Controls.Add(this.gasTemperatureLabel);
+            this.Controls.Add(this.resistanceDisplayLabel);
+            this.Controls.Add(this.resistanceLabel);
+            this.Controls.Add(this.complianceDisplayLabel);
+            this.Controls.Add(this.complianceLabel);
             this.Controls.Add(this.serialNumberDisplayLabel);
             this.Controls.Add(this.serialNumberLabel);
             this.Controls.Add(this.testDateDisplayLabel);
@@ -431,14 +422,14 @@
         private System.Windows.Forms.Label testDateDisplayLabel;
         private System.Windows.Forms.Label serialNumberLabel;
         private System.Windows.Forms.Label serialNumberDisplayLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label complianceDisplayLabel;
+        private System.Windows.Forms.Label complianceLabel;
+        private System.Windows.Forms.Label resistanceDisplayLabel;
+        private System.Windows.Forms.Label resistanceLabel;
+        private System.Windows.Forms.Label gasTemperatureDisplayLabel;
+        private System.Windows.Forms.Label gasTemperatureLabel;
+        private System.Windows.Forms.Label barometricPressureDisplayLabel;
+        private System.Windows.Forms.Label barometricPressureLabel;
         private System.Windows.Forms.Label complianceUnitsLabel;
         private System.Windows.Forms.Label gasTemperatureUnitsLabel;
         private System.Windows.Forms.Label barometricBressureUnitsLabel;

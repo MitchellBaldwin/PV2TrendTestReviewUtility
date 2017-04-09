@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PV2TrendTestReviewUtility
 {
-    class TrendTestResults
+    public class TrendTestResults
     {
         private string name;
         public string Name
@@ -49,6 +49,13 @@ namespace PV2TrendTestReviewUtility
             set { gasTemperature = value; }
         }
 
+        private string referenceSystem;
+        public string ReferenceSystem
+        {
+            get { return referenceSystem; }
+            set { referenceSystem = value; }
+        }
+        
         private DateTime testTime;
         public DateTime TestTime
         {
@@ -56,15 +63,15 @@ namespace PV2TrendTestReviewUtility
             set { testTime = value; }
         }
 
-        private double testLength;
-        public double TestLength
+        private TimeSpan testLength;
+        public TimeSpan TestLength
         {
             get { return testLength; }
             set { testLength = value; }
         }
 
-        private double sampleInterval;
-        public double SampleInterval
+        private TimeSpan sampleInterval;
+        public TimeSpan SampleInterval
         {
             get { return sampleInterval; }
             set { sampleInterval = value; }
@@ -77,12 +84,43 @@ namespace PV2TrendTestReviewUtility
             set { sampleCount = value; }
         }
 
-        private MeasuredParameter[] parameters;
-        public MeasuredParameter[] Parameters
+        //private MeasuredParameter[] parameters = new MeasuredParameter[24];
+        //public MeasuredParameter[] Parameters
+        //{
+        //    get { return parameters; }
+        //    set { parameters = value; }
+        //}
+
+        private List<MeasuredParameter> parameters = new List<MeasuredParameter>();
+        public List<MeasuredParameter> Parameters
         {
             get { return parameters; }
-            set { parameters = value; }
+            //set { parameters = value; }
         }
 
+        public string GetComplianceString()
+        {
+            if (serialNumber[2].Equals("I"))
+            {
+                return (compliance / 1000.0).ToString("0.000");
+            }
+            else
+            {
+                return (compliance / 100.0).ToString("0.00");
+            }
+        }
+
+        public string GetResistanceString()
+        {
+            if (serialNumber[0].Equals("D"))
+            {
+                //TODO: Update to correctly represent resistor values for Dual Adult lung type
+                return "Rp" + resistance.ToString();
+            }
+            else
+            {
+                return "Rp" + resistance.ToString();
+            }
+        }
     }
 }
