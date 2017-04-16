@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PV2TTRMain));
             this.OpenTrendTestFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ttrLlistView = new System.Windows.Forms.ListView();
             this.measuredParameterColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -336,7 +337,7 @@
             this.sampleIntervalDisplayLabel.Name = "sampleIntervalDisplayLabel";
             this.sampleIntervalDisplayLabel.Size = new System.Drawing.Size(106, 23);
             this.sampleIntervalDisplayLabel.TabIndex = 21;
-            this.sampleIntervalDisplayLabel.Text = "10";
+            this.sampleIntervalDisplayLabel.Text = "hh:mm:ss";
             this.sampleIntervalDisplayLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // sampleIntervalLabel
@@ -353,7 +354,7 @@
             this.testLengthDisplayLabel.Name = "testLengthDisplayLabel";
             this.testLengthDisplayLabel.Size = new System.Drawing.Size(106, 23);
             this.testLengthDisplayLabel.TabIndex = 19;
-            this.testLengthDisplayLabel.Text = "8";
+            this.testLengthDisplayLabel.Text = "hh:mm:ss";
             this.testLengthDisplayLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // testLengthLabel
@@ -396,6 +397,7 @@
             this.Controls.Add(this.testFileDisplayLabel);
             this.Controls.Add(this.lttrfButton);
             this.Controls.Add(this.ttrLlistView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PV2TTRMain";
             this.Text = "PneuView® 2.0 Trend Test Review";
             this.ResumeLayout(false);
